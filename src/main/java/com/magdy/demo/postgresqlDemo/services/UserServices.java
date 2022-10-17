@@ -2,7 +2,7 @@ package com.magdy.demo.postgresqlDemo.services;
 
 import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model.User;
 import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.port.UserRepository;
-import com.magdy.demo.postgresqlDemo.entities.UserResponse;
+import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model.UserResponse;
 import org.springframework.stereotype.Service;
 
 @Service

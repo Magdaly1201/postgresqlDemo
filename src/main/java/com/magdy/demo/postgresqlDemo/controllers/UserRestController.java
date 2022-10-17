@@ -1,6 +1,6 @@
 package com.magdy.demo.postgresqlDemo.controllers;
 
-import com.magdy.demo.postgresqlDemo.entities.UserResponse;
+import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model.UserResponse;
 import com.magdy.demo.postgresqlDemo.services.UserServices;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

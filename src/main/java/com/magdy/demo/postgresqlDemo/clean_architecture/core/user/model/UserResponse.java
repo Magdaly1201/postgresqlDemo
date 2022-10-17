@@ -1,4 +1,4 @@
-package com.magdy.demo.postgresqlDemo.entities;
+package com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model;
 
 public class UserResponse {
 
