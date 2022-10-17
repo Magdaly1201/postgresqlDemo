@@ -1,8 +1,8 @@
 package com.magdy.demo.postgresqlDemo.services;
 
-import com.magdy.demo.postgresqlDemo.entities.User;
+import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model.User;
+import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.port.UserRepository;
 import com.magdy.demo.postgresqlDemo.entities.UserResponse;
-import com.magdy.demo.postgresqlDemo.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,7 +14,7 @@ public class UserServices {
     }
 
     public UserResponse getUserById(Integer id) {
-       User user = userRepository.findById(id).orElseThrow(()->new RuntimeException("not found"));
+       User user = userRepository.findById(id);
        return new UserResponse(user.getName(),user.getMail());
     }
 }

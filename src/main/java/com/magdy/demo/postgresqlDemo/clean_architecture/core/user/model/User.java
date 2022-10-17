@@ -6,6 +6,12 @@ public class User {
     private String name;
     private String mail;
 
+    public User(Integer id, String name, String mail) {
+        this.id = id;
+        this.name = name;
+        this.mail = mail;
+    }
+
     public Integer getId() {
         return id;
     }
