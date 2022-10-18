@@ -1,6 +1,6 @@
 package com.magdy.demo.postgresqlDemo.clean_architecture.infrastructure.delivery;
 
-import com.magdy.demo.postgresqlDemo.clean_architecture.adapter.delivery.UserEnpoints;
+import com.magdy.demo.postgresqlDemo.clean_architecture.adapter.delivery.UserEnpoint;
 import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model.UserResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserRestController {
 
-    public UserEnpoints userEnpoints;
+    public UserEnpoint userEnpoints;
 
-    public UserRestController(UserEnpoints userEnpoints) {
+    public UserRestController(UserEnpoint userEnpoints) {
         this.userEnpoints = userEnpoints;
     }
 

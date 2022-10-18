@@ -1,9 +1,9 @@
 package com.magdy.demo.postgresqlDemo.clean_architecture.infrastructure.app.config;
 
-import com.magdy.demo.postgresqlDemo.clean_architecture.adapter.delivery.UserEnpoints;
+import com.magdy.demo.postgresqlDemo.clean_architecture.adapter.delivery.UserEnpoint;
 import com.magdy.demo.postgresqlDemo.clean_architecture.adapter.repository.UserAdapterRepository;
 import com.magdy.demo.postgresqlDemo.clean_architecture.infrastructure.repository.dao.UserDao;
-import com.magdy.demo.postgresqlDemo.services.UserServices;
+import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.useCase.UserServices;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,7 +29,7 @@ public class SpringDependencyConfig {
     }
 
     @Bean
-    public UserEnpoints userController(){
-        return new UserEnpoints(userServices());
+    public UserEnpoint userController(){
+        return new UserEnpoint(userServices());
     }
 }
