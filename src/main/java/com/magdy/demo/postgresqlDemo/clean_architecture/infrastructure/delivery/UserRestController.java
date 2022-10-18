@@ -1,7 +1,7 @@
-package com.magdy.demo.postgresqlDemo.controllers;
+package com.magdy.demo.postgresqlDemo.clean_architecture.infrastructure.delivery;
 
+import com.magdy.demo.postgresqlDemo.clean_architecture.adapter.delivery.UserEnpoints;
 import com.magdy.demo.postgresqlDemo.clean_architecture.core.user.model.UserResponse;
-import com.magdy.demo.postgresqlDemo.services.UserServices;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserRestController {
 
-    public UserServices userServices;
+    public UserEnpoints userEnpoints;
 
-    public UserRestController(UserServices userServices) {
-        this.userServices = userServices;
+    public UserRestController(UserEnpoints userEnpoints) {
+        this.userEnpoints = userEnpoints;
     }
 
     @GetMapping
     public UserResponse getUser(@RequestParam Integer id){
-       return userServices.getUserById(id);
+       return userEnpoints.getUser(id);
     }
 }
